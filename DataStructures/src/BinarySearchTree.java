@@ -28,7 +28,39 @@ public class BinarySearchTree {
 		}
 		
 	  }
-	  
+	public static void main(String[] args) {
+		BinarySearchTree tree = new BinarySearchTree();
+		tree.insert(tree,77);
+		tree.insert(tree,18);
+		tree.insert(tree,78);
+		tree.insert(tree,83);
+		tree.insert(tree,80);
+		tree.insert(tree,93);
+		tree.insert(tree,100);
+		tree.insert(tree,99);
+		tree.insert(tree,97);
+		tree.insert(tree,89);
+		tree.insert(tree,85);
+		tree.insert(tree,90);
+		tree.insert(tree,79);
+		tree.insert(tree,56);
+		tree.insert(tree,20);
+		tree.insert(tree,10);
+		tree.insert(tree,12);
+		tree.insert(tree,1);
+		tree.printInOrder();
+		System.out.println("");
+		int remove = 83;
+		int value = tree.findSuccessor(remove).data;
+		int value1 = tree.findParent(value).data;
+		System.out.println("Successor: " + value);
+		System.out.println("Parent of successor: " + value1);
+		int value2 = tree.lookup(56).data;
+		System.out.println("Node found " + value1);
+		tree.remove(remove);
+		tree.printInOrder();
+		System.out.println("");
+	}
 //insert new node in the binary search tree
 	  public void insert(BinarySearchTree tree, int value) {
 		  if(tree.root == null) {
@@ -176,5 +208,13 @@ public class BinarySearchTree {
 		  if(root != null) {
 			  root.printInOrder();
 		  }
+	  }
+
+	  public Node findNode(Node root, int value){
+		 if(root == null){return null;}
+		 if(root.data == value){return root;}
+		 if(root.data > value){return findNode(root.right, value);}
+		 if(root.data <= value){return findNode(root.left, value);}
+		 return root;
 	  }
 }

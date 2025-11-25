@@ -128,7 +128,7 @@ class Main {
 
 //*****************************************************************************************
 		  //Binary search Tree Implementation
-		  /*
+
 		  BinarySearchTree tree = new BinarySearchTree();
 		  tree.insert(tree,77);
 		  tree.insert(tree,18);
@@ -155,14 +155,16 @@ class Main {
 		  int value1 = tree.findParent(value).data;
 		  System.out.println("Successor: " + value);
 		  System.out.println("Parent of successor: " + value1);
+		  int value2 = tree.lookup(56).data;
+		  System.out.println("Node found " + value1);
 		  tree.remove(remove);
 		  tree.printInOrder();
 		  System.out.println("");
-		  */
+
 
 //*****************************************************************************************
 		  //Graph Implementation
-		  Graph graph = new Graph();
+		 /* Graph graph = new Graph();
 		  graph.addVertex(0);
 		  graph.addVertex(1);
 		  graph.addVertex(2);
@@ -181,7 +183,7 @@ class Main {
 		  graph.addEdge(6, 5);
 		  graph.addEdge(6, 7);
 		  
-		  graph.printGraph();
+		  graph.printGraph();*/
 	  }
 	 
 	}
